@@ -28,3 +28,10 @@
   <li>Graphic Design.</li>
   <li>Motion Graphic</li>
 </ul>
+
+<h2>Tech Stack</h2>
+<ul>
+  <li>Html</li>
+  <li>Css</li>
+  <li>Javascript</li>
+</ul>
