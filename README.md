@@ -1,6 +1,6 @@
 <h1>EKQiEnterprises Website</h1>
 
-<img src="https://photos.app.goo.gl/7hTWZ8YjG6To2EYh9" alt="EKQi Website ">
+<img src="https://photos.app.goo.gl/M6S5UthjC6tQDxM37" alt="EKQi Website ">
 
 <p>During my academic career, I established EKQiEnterprises in order to professionally offer my freelance services and to put the knowledge I've gained from my qualifications and certifications into practice.</p>
 
