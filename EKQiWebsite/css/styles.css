@@ -1,0 +1,1308 @@
+/* -------------------------------------------------------------
+Website Name    : EKQiEnterprise Website 
+Author          : Sakhile Mkhalele
+Date            : Feb 2024
+--------------------------------------------------------------*/
+
+h1, h2, h3, h4 {
+    color: #262262;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+#container {
+    width: 100%;
+}
+
+/*---------------------------------
+Header 
+-----------------------------------*/
+header {
+    position: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Adjust the z-index as needed */
+    transition: background-color 2s ease;
+}
+
+.img_logo {
+    height: 50%;
+    width: 40%;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-bottom: 30px;
+} 
+
+.header-transparent {
+    background-color: transparent; /* Set the initial transparent background color */
+}
+
+.header-white {
+    background-color: #ffffff; /* Set the background color when scrolled */
+}
+
+
+/* Nav Menu */
+
+nav {
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+    border-bottom : 1px solid transparent;
+    animation: fadeInFromRightLogo 2s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+}
+
+
+
+nav a {
+    color: #262262;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom : 2px solid transparent;
+}
+
+nav a:hover {
+    color:#262262;
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+nav a.active{
+    color: goldenrod;
+    font-weight: bold;
+    border-bottom-color: goldenrod;
+}
+
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    
+}
+
+.squares {
+    width: 150px;
+}
+
+/*  Mobile Optimization - Header */
+
+@media only screen and (max-width: 1200px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* EKQi Enterprise Logo */
+    .img_logo {
+        height: 50px;
+        width: 150px;
+        padding-top: 10%;
+        padding-left: 5%;
+        padding-bottom: 10%;
+    } 
+
+    .menu-icon {
+        display: block;
+        margin-right: 5px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .menu-icon:active {
+        background-color: #F1F2F2;;
+    }
+
+    .img_hamburger {
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin: auto; /* Center the image horizontally */
+        padding-top:10px ;
+    }
+
+    
+    nav {
+        
+        display: flex;
+        align-items: center;
+        position: relative;
+        animation: fadeInFromRightLogo 2s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+        
+    }
+
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 150px; /* Adjust the width as needed */
+        text-align: right;
+        background-color: #262262;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        text-align: center;
+        border-bottom : 2px solid transparent;
+        
+    }
+
+    .menu-links a {
+        display: block;
+        padding: 15px; /* Adjust padding as needed */
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s; /* Add a smooth transition effect */
+
+    }
+
+    .menu-links a:active {
+        color:goldenrod;;
+        border-bottom-color: goldenrod;
+    }
+
+    .menu-links a:hover {
+        background-color: #555; /* Change the background color on hover */
+        
+    }
+
+    .menu-links.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .squares {
+        width: 40px;
+        display: none;
+    }
+}
+
+/*---------- End of Mobile Optimization - Header ---------------------*/
+
+
+
+/* Logo */
+
+.logo {
+
+    margin-right: auto; /* Pushes the logo to the left */
+    padding-left: 30px;
+    animation: fadeInFromLeftLogo 2s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+}
+
+/* fades from right */
+@keyframes fadeInFromLeftLogo {
+    0% {
+        opacity: 0;
+    
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* fades from right*/
+@keyframes fadeInFromRightLogo {
+    0% {
+        opacity: 0;
+        transform: translateX(+100%); /* Move the image outside the left side of its container */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move the image outside the left side of its container */
+    }
+}
+
+
+/*------ End of header --------------------*/
+
+
+
+/*---------------- Body --------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+
+/* Div that contains the header and the paragraphs*/
+.intro_heading {
+    width: 50%;
+    height: 700px;
+    margin-left: auto;
+    
+}
+
+.intro_image_container {
+    width: 50%;
+    overflow: hidden;
+    animation: fadeInFromRightLogo 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+    
+}
+
+.intro_image {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 700px;
+    transition: transform 4.5s ease-in-out;
+}
+
+.intro_heading_paragarph {
+    margin-left: auto;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    padding-left: 40px;
+    padding-right: 5%;
+    animation: fadeInFromLeft 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+    
+}
+
+.intro_heading_paragarph h1 {
+    font-size: 30px;
+}
+
+.goldLine{
+    width: 125px;
+}
+
+.intro_heading_paragarph p {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.EKQiSgnature {
+    padding-top: 30px;
+    opacity: 0; /* Set initial opacity to 0 so the image is hidden initially */
+    animation: fadeInFromLeft 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Move the image outside the left side of its container */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move the image to its final position (no translation) */
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        
+    }
+
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+/*  Mobile Optimization - Header */
+
+@media only screen and (max-width: 1200px) {
+
+    /* Div that contains the header and the paragraphs*/
+    .intro_heading {
+        
+        width: 55%;
+        height: 550px;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        padding:10% 0;
+    }
+
+    .intro_heading_paragarph {
+        margin-left: auto;
+        padding-top: 90px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 50px;
+        animation: fadeInFromLeft 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+    }
+    
+    .intro_heading_paragarph h1 {
+        font-size: 25px;
+    }
+    
+    .intro_heading_paragarph p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .goldLine{
+        width: 80px;
+    }
+    
+    .EKQiSgnature {
+        width: 150px;
+        padding-top: 30px;
+        opacity: 0; /* Set initial opacity to 0 so the image is hidden initially */
+        animation: fadeInFromLeft 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+    }
+    
+    .intro_image_container {
+        width: 50%;
+        overflow: hidden;
+        animation: fadeInFromRightLogo 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+    }
+    
+    .intro_image {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        height: 700px;
+        transition: transform 4.5s ease-in-out;
+    }
+
+
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Move the image outside the left side of its container */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move the image to its final position (no translation) */
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        
+    }
+
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+}
+
+
+/* -------------- Slide shows intro ------------*/
+
+
+.unbrandedClubIpad {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 20px;
+    height: 80%;
+    width: 90%;
+    
+}
+
+.slideshow_ndzungu_Website{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 20px;
+    height: 80%;
+    width: 90%;
+}
+
+.slideshow_cloud11_Website {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 50px;
+    margin: 10px;
+    height: 90%;
+    width: 90%;
+}
+
+.slideshow_hm_Website {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 20px;
+    height: 50%;
+    width: 90%;
+}
+
+/*---------- Mobile Optimization - Image container ------------*/
+@media only screen and (max-width: 1200px) {
+
+    .intro_image_container {
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        width: 50%;
+        height: 550px;
+        overflow: hidden;
+        animation: fadeInFromRightLogo 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+        
+    }
+    
+    .intro_image {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+        width: 100%;
+        height: 700px;
+        transition: transform 4.5s ease-in-out;
+    }
+
+    .unbrandedClubIpad {
+        padding-top: 150px;
+        padding-bottom: 250px;
+        padding-left: 10px;
+        padding-right: 20px;
+        height: 300px;
+        width: 250px;
+    }
+
+    .slideshow_ndzungu_Website{
+        padding-top: 150px;
+        padding-bottom: 250px;
+        padding-left: 10px;
+        padding-right: 20px;
+        height: 300px;
+        width: 250px;
+    }
+    
+    .slideshow_cloud11_Website {
+        padding-top: 150px;
+        padding-bottom: 250px;
+        padding-left: 10px;
+        padding-right: 20px;
+        height: 300px;
+        width: 250px;
+    }
+    
+    .slideshow_hm_Website {
+        padding-top: 150px;
+        padding-bottom: 250px;
+        padding-left: 10px;
+        padding-right: 20px;
+        height: 200px;
+        width: 250px;
+    }
+
+}
+
+/*---------- End of Mobile Optimization - Image container ------------*/
+
+/*--------------- client_logos -----------------*/
+
+.client_logos_container {
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    overflow: hidden;
+
+}
+
+.squaresBlue {
+    width: 150px;
+    animation: fadeInFromLeft 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+    
+}
+
+/* Container that carries the client logos*/
+.client_logo_row_container{
+    display: block;
+    overflow: hidden;
+    animation: fadeInFromRightLogo 2s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+}
+
+.client_logo_row {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    align-items: center;
+    
+}
+
+.client_logo{
+    margin-right: 100px; /* Adjust the spacing between logos */
+    transition: transform 0.3s ease;
+    
+}
+
+.client_logo:hover {
+    transform: scale(1.2); /* Increase size by 10% when hovered */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%); /* Move the logos by the width of the container */
+    }
+}
+
+/*---------- Mobile Optimization - Client Logo ------------*/
+@media only screen and (max-width: 1200px) {
+
+    /*--------------- client_logos -----------------*/
+    .client_logos_container {
+        
+        
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .squaresBlue {
+        width: 100px;
+        animation: fadeInFromLeft 1s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+    }
+    
+    /* Container that carries the client logos*/
+    .client_logo_row_container{
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        animation: fadeInFromRightLogo 2s ease-in-out forwards; /* Adjust the duration and easing function as needed */
+    }
+    
+    .client_logo_row {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        align-items: center;
+    }
+    
+    .client_logo{
+        margin-right: 10%; /* Adjust the spacing between logos */
+        transition: transform 0.3s ease;
+    }
+    
+    .client_logo:hover {
+        transform: scale(1.2); /* Increase size by 10% when hovered */
+    }
+}
+
+/*---------- End of Mobile Optimization - Client Logo ------------*/
+
+/*-------------- Professional Services -------*/
+
+.text_professionalServices_container {
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10% 0;
+    
+    
+}
+
+.text_professionalServices {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+
+
+.text_professionalServices img {
+    margin: 0 auto;
+    
+}
+
+ 
+
+.img_professionalServices_container{
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.professionalServices {
+    width: 50%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;    
+}
+
+.professionalServices:hover {
+    transform: scale(1.2); /* Increase size by 10% when hovered */
+}
+
+/*---------- Mobile Optimization - Professional Services ------------*/
+
+@media only screen and (max-width: 1200px) {
+
+    /*--------------- Professioanl Services -----------------*/
+    .text_professionalServices_container {
+
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 10px 0;
+        
+    }
+    
+    .text_professionalServices {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 10%;
+        
+    }
+    
+    
+    .text_professionalServices img {
+        margin: 0 auto;
+        
+    }
+    
+    .img_professionalServices_container{
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 500px;
+    
+    }
+
+    
+    
+    .professionalServices {
+        width: 90%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform 0.3s ease;    
+    }
+    
+    .professionalServices:hover {
+        transform: scale(1.2); /* Increase size by 10% when hovered */
+    }
+}
+/*---------- End of Mobile Optimization - Professional Services ---------*/
+
+/*-------------- End Professional Services -------*/
+
+/*-------------- Portfolio ------------*/
+
+.portfolio_container {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: scroll;
+    
+}
+
+/* Style the scrollbar */
+.portfolio_container::-webkit-scrollbar {
+    width: 0%;
+  }
+  
+  .portfolio_container::-webkit-scrollbar-thumb {
+    background-color:#262262; /* Set your desired scrollbar color */
+  }
+  
+  .portfolio_container::-webkit-scrollbar-track {
+    background-color: #F1F2F2; /* Set another color for the scrollbar track if needed */
+  }
+
+.portfolio_container h1  {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio_cards_container{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio_cards {
+    display: block;
+    height: 500px;
+    width: 350px;
+    margin: 0 auto;
+    align-items: center;
+    transition: transform 0.3s ease;
+    padding: 3%;
+}
+
+
+.portfolio_cards:hover {
+    transform: scale(1.2); /* Increase size by 20% when hovered */
+    
+}
+
+.img_portfolio_cards_container{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_portfolio_cards_container {
+    display: flex;
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.line_portfolio_cards_container {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.svg_blueLine {
+    width: 100px;
+    transition: transform 0.3s ease;
+
+}
+
+.svg_blueLine:hover {
+    transform: scale(1.2); /* Increase size by 20% when hovered */
+}
+
+.text_portfolio_cards_container p {
+    font-size: 20px;
+}
+
+.img_portfolio_cards {
+    width: 100%;
+    height: 80%;
+}
+
+.img_portfolio_cards_logo {
+    width: 100%;
+    height: 40%;
+}
+
+.portfolio_explore_portfolio  {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.portfolio_explore_portfolio a {
+    color: #262262;
+}
+
+.portfolio_explore_portfolio a:hover {
+    color: gold;
+}
+
+/*---------- Mobile Optimization - Portfolio ------------*/
+
+@media only screen and (max-width: 1200px) {
+
+    /*--------------- Portfolio Services -----------------*/
+    .portfolio_container {
+        width: 100%;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        overflow: scroll;
+    }
+    
+    .portfolio_container h1  {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .portfolio_cards_container{
+        width: 80%;
+        height: 550px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile_hide {
+        display: none;
+    }
+
+    
+    
+    .portfolio_cards {
+        display: block;
+        justify-content: space-between;
+        height: 500px;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        transition: transform 0.3s ease;
+        padding-top: 20px;
+        background-color: #F1F2F2;
+        border: white 4px solid;
+        border-radius: 60%;
+        border-radius: 20px;
+    
+        
+    }
+    
+    
+    .portfolio_cards:hover {
+        transform: scale(1.2); /* Increase size by 20% when hovered */
+        
+    }
+    
+    .img_portfolio_cards_container{
+        display: flex;
+        width: 80%;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .text_portfolio_cards_container {
+        display: flex;
+        width: 300px;
+        height: 150px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+    
+    
+    
+    .line_portfolio_cards_container {
+        display: flex;
+        width: 300px;
+        height: 50px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .svg_blueLine {
+        width: 100px;
+        transition: transform 0.3s ease;
+    
+    }
+    
+    .svg_blueLine:hover {
+        transform: scale(1.2); /* Increase size by 20% when hovered */
+    }
+    
+    .text_portfolio_cards_container p {
+        font-size: 20px;
+    }
+    
+    .img_portfolio_cards {
+        width: 100%;
+        height: 80%;
+    }
+    
+    .img_portfolio_cards_logo {
+        width: 100%;
+        height: 40%;
+    }
+    
+    .portfolio_explore_portfolio  {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        
+    }
+    
+    .portfolio_explore_portfolio a {
+        color: #262262;
+    }
+    
+    .portfolio_explore_portfolio a:hover {
+        color: gold;
+    }
+}
+/*----- Mobile Optimization - Portfolio -------------*/
+
+/*-------------- End of Portfolio --------------*/
+
+/*------------Slogan ------------------*/
+.slogan_container {
+    background-color: #262262;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/*---------- Mobile Optimization - Portfolio ------------*/
+
+@media only screen and (max-width: 1200px) {
+    
+    /*--------------- Portfolio Services -----------------*/
+    .portfolio_container {
+        width: 100%;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        overflow: scroll;
+    }
+
+    .slogan_container {
+        width: 100%;
+    }
+
+    .slogan_container p {
+
+        font-size: 15px;
+        text-align: center;
+        width: 70%;
+        margin: auto;
+    }
+    .slogan_container img{
+        padding: 5% 0;
+    }
+
+    .slogan_ekqi_signature{
+        width: 200px;
+    }
+}
+
+/*------------ End of Slogan ----------*/
+
+/*---------- About Us -----------*/
+
+/* .img_aboutUs_container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.img_aboutUs {
+    width: 90%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease; 
+    
+}
+
+.img_aboutUs:hover {
+    transform: scale(1.1); /* Increase size by 20% when hovered */
+/* }
+
+.img_abouts_img_conatiner {
+    justify-content: center;
+} */ 
+
+/*---------- Mobile Optimization - About Us ------------*/
+
+/* @media only screen and (max-width: 1200px) {
+
+    /*--------------- Portfolio Services -----------------*//*
+    .img_aboutUs_container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: center;
+        padding: 30px 0;
+    }
+    
+    .img_aboutUs {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px 0;
+        transition: transform 0.3s ease;
+    }
+    
+    .img_aboutUs:hover {
+        transform: scale(1.1); /* Increase size by 20% when hovered *//*
+    }
+    
+    .img_abouts_img_conatiner {
+        justify-content: center;
+    } 
+
+} */
+
+/*--------- End of Section Mobile Optimization - Portfolio*/
+/*--------- End of about us Section ----------*/
+
+/*--------- Certitifiation ----------*/
+
+.certification_container {
+
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    background-color:#262262;
+}
+
+.certification_container h3 {
+    font-size: 20px;
+    color: white;
+}
+
+.certification_container img{
+    padding: 10px;
+    width: 150px;
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    /*--------------- Mobile Optimization Certification Counter -----------------*/
+    .certification_container {
+
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        background-color:#262262;
+        width: 100%;
+    }
+    
+    .certification_container h3 {
+        font-size: 20px;
+        color: white;
+    }
+    
+    .certification_container img{
+        padding: 10px;
+        width: 150px;
+    }
+}
+
+/*--------- End of Certitifiation  --------------*/
+
+/*-------------- Connect with Us ------------------*/
+
+.img_contactUs_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.img_contactUS_img_conatiner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.img_contactUs {
+    width: 100px;
+    height: 100px;
+    padding: 40px;
+}
+
+.img_contactUS_socials_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.img_contactUS_socials_container img {
+    transition: transform 0.3s ease;
+}
+
+.img_contactUS_socials_container img:hover {
+    transform: scale(1.1); /* Increase size by 20% when hovered */
+}
+
+.img_contactUs_ekqiLogo {
+    width: 40%;
+    height: 40%;
+    
+}
+
+.text_contactUs {
+    display: block;
+    margin: 0 auto;
+    padding: 40px;
+
+}
+
+.text_contactUs_email a {
+    color:#262262;
+    font-weight: bold;
+
+}
+
+/*--------------- Mobile Optimization - Contact Us -----------------*/
+ @media only screen and (max-width: 1200px) {
+
+    .img_contactUs_container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 30px 0;
+    }
+    
+    .img_contactUS_img_conatiner {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .img_contactUs {
+        width: 40%;
+        height: 40%;
+        padding: 10%;
+    }
+    
+    .img_contactUS_socials_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    
+    .img_contactUS_socials_container img {
+        transition: transform 0.3s ease;
+    }
+    
+    .img_contactUS_socials_container img:hover {
+        transform: scale(1.1); /* Increase size by 20% when hovered */
+    }
+    
+    .img_contactUs_ekqiLogo {
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    .text_contactUs {
+        display: block;
+        margin: 0 auto;
+        padding: 40px;
+    
+    }
+    
+    .text_contactUs_email a {
+        color:#262262;
+        font-weight: bold;
+    
+    }
+    
+}
+/*--------------- End Connect with Us Section -----------------*/
+
+/* -------------------- footer ------------------ */
+
+.footer_container {
+
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    background-color:#262262;
+}
+
+.footer_container p {
+    font-size: 10px;
+    color: white;
+}
+
+/* -------------- End of footer section -------------*/
+
+/*------------- Button --------------------*/
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    display: none;
+    background-color:lightgrey;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: transform 1.5s ease;
+  }/* End of Body */
+
+
+    
+
+
