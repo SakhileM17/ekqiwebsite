@@ -1,8 +1,9 @@
 <h1>EKQiEnterprises Website</h1>
 
+<p>During my academic career, I established EKQiEnterprises in order to professionally offer my freelance services and to put the knowledge I've gained from my qualifications and certifications into practice.</p>
+
 <img src="https://lh3.googleusercontent.com/pw/ABLVV85XfldimQjrIO0rQ2ygQIjeRXic1CBz1x7LANbjQkqtvF2QtaSmeXX-M5gJvWkAWjv0-h38QvGqJRNAnuz-Sph2424Nw26bNyF5OFG7tGGD3cOhgukN8B8XNEVsHQ5BtOl05PSTAgYHXx_Mg3FNgqEx=w1291-h913-s-no-gm?authuser=0" alt="EKQi Website">
 
-<p>During my academic career, I established EKQiEnterprises in order to professionally offer my freelance services and to put the knowledge I've gained from my qualifications and certifications into practice.</p>
 
 <p>At EKQiEnterprises we’re a boutique Business Development & Consulting company which 
   focuses on using the latest innovative tools & strategies tailored according to our clients 
