@@ -1,4 +1,6 @@
-<h1>EKQiEnterprises Website</h1>
+<h1>EKQiEnterprises Website</h1> 
+
+<p><a src="https://sakhilem17.github.io/ekqiwebsite/">Click to visit EKQiEnterprise Website</a></p>
 
 <p>During my academic career, I established EKQiEnterprises in order to professionally offer my freelance services and to put the knowledge I've gained from my qualifications and certifications into practice.</p>
 
